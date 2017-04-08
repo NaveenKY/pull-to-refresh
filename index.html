@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Pull to Refresh</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+		<script src="http://hammerjs.github.io/dist/hammer.min.js"></script>
+		<link href="./src/pull-to-refresh.css" rel="stylesheet" />
+		<script src="./src/pull-to-refresh.js" rel="stylesheet"></script>
+		<style>
+			body {
+				width: 100vw;
+				height: 100vh;
+				overflow: hidden;
+				margin: 0px;
+				padding: 0px;
+				background-color: azure;
+			}
+			.header {
+				position: absolute;
+				left: 0;
+				top: 0;
+				height: 50px;
+				width: 100vw;
+				box-shadow: 0 3px 5px -1px rgba(0,0,0,.2), 0 6px 10px 0 rgba(0,0,0,.14), 0 1px 18px 0 rgba(0,0,0,.12);
+				padding: 0px 20px;
+				line-height: 50px;
+				vertical-align: middle;
+				background-color: #FFFFFF;
+				color: #22a0d2;
+				font-size: 20px;
+			}
+			.content {
+				height: calc(100vh - 50px);
+				margin-top: 50px;
+				width: 100vw;
+				text-align: center;
+				padding-top: 20px;
+				font-size: 20px;
+			}
+		</style>
+	</head>
+	<body>
+		<a href="https://github.com/NaveenKY/pull-to-refresh">
+			<img style="position: absolute; top: 0; right: 0; border: 0; z-index: 1000;" src="https://camo.githubusercontent.com/38ef81f8aca64bb9a64448d0d70f1308ef5341ab/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png">
+		</a>
+		<div class="header">Pull to Refresh Demo</div>
+		<div class="content">
+			Pull Here to Refresh
+		</div>
+		<script>
+			var pullToRefresh = new PullToRefresh({$el: document.getElementsByClassName('content')[0], delay: 5000});
+		</script>
+	</body>
+
+</html>

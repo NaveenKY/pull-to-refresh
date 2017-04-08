@@ -1,0 +1,26 @@
+.reload-loader {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: -55px;
+	width: 50px;
+	height: 50px;
+	margin: auto;
+	box-shadow: 0 3px 5px -1px rgba(0,0,0,.2), 0 6px 10px 0 rgba(0,0,0,.14), 0 1px 18px 0 rgba(0,0,0,.12);
+	border-radius: 50%;
+	z-index: 9999;
+	background-color: #FFFFFF;
+}
+.reload-loader > svg > circle {
+	stroke-dashoffset: -40;
+	stroke-width: 4px;
+	stroke: #22a0d2;
+}
+@keyframes rotating {
+    from {
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
